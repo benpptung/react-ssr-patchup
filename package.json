@@ -1,0 +1,46 @@
+{
+  "name": "react-ssr-patchup",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=react-ssr-patchup:* node ./bin/www",
+    "appbuild": "appbuild",
+    "appstack": "appstack",
+    "appwatch": "appwatch --server 0.0.0.0:3000",
+    "bsync": "npm start & npm run appwatch",
+    "eslint": "TIMING=1 eslint . --ignore-pattern node_modules/"
+  },
+  "browserify": {
+    "transform": [
+      "envify"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "cookie-parser": "^1.4.1",
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "inject-css": "github:benpptung/inject-css",
+    "morgan": "^1.7.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "swig": "git://github.com/benpptung/swig"
+  },
+  "devDependencies": {
+    "appstackr": "^0.3.18",
+    "classhash": "github:benpptung/classhash",
+    "envify": "^3.4.0",
+    "eslint": "^4.19.1",
+    "eslint-config-less": "github:benpptung/eslint-config-less",
+    "eslint-config-less-react": "github:benpptung/eslint-config-less-react",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-react": "^7.7.0",
+    "inherits": "^2.0.3",
+    "mocha": "^2.4.5"
+  },
+  "eslintIgnore": [
+    "public/**/*.*"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "bsync": {
+    "browser": "google chrome",
+    "proxy": "0.0.0.0:3000",
+    "ghostMode": false,
+    "open": false
+  }
+}
